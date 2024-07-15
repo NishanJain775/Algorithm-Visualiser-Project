@@ -53,7 +53,7 @@ select:focus{
     border-top: 1px solid rgb(9, 237, 245);
     position: absolute;
     top: 150.386px;
-    left: 752.728px;
+    left: 480px;
     width: 100.7903px;
     z-index: 1;
     transform: rotate(133.815deg);
@@ -63,7 +63,7 @@ select:focus{
     border-top: 1px solid rgb(9, 237, 245);
     position: absolute;
     top: 149.386px;
-    left: 767.728px;
+    left: 500px;
     width: 100.7903px;
     z-index: 1;
     transform: rotate(407.815deg);
@@ -73,7 +73,7 @@ select:focus{
     border-top: 1px solid rgb(9, 237, 245);
     position: absolute;
     top: 255.386px;
-    left: 666.728px;
+    left: 400px;
     width: 101.7903px;
     z-index: 1;
     transform: rotate(113.815deg);
@@ -83,7 +83,7 @@ select:focus{
     border-top: 1px solid rgb(9, 237, 245);
     position: absolute;
     top: 255.386px;
-    left: 684.728px;
+    left: 420px;
     width: 100.7903px;
     z-index: 1;
     transform: rotate(69.815deg);
@@ -93,7 +93,7 @@ select:focus{
     border-top: 1px solid rgb(9, 237, 245);
     position: absolute;
     top: 255.386px;
-    left: 835.728px;
+    left: 570px;
     width: 101.7903px;
     z-index: 1;
     transform: rotate(111.815deg);
@@ -103,7 +103,7 @@ select:focus{
     border-top: 1px solid rgb(9, 237, 245);
     position: absolute;
     top: 255.386px;
-    left: 853.728px;
+    left: 580px;
     width: 100.7903px;
     z-index: 1;
     transform: rotate(67.815deg);
