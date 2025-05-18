@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Algorithm Visualization</title>
+    <link rel="stylesheet" href="graph.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Graph Algorithm Visualization</h1>
+        <div class="controls">
+            <button id="addNodeBtn">Add Node</button>
+            <button id="addEdgeBtn">Add Edge</button>
+            <button id="clearBtn">Clear Graph</button>
+            <select id="algorithm">
+                <option value="bfs">Breadth First Search</option>
+                <option value="dfs">Depth First Search</option>
+            </select>
+            <button id="visualizeBtn">Visualize</button>
+        </div>
+        <div class="graph-container">
+            <canvas id="graphCanvas"></canvas>
+        </div>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="color-box unvisited"></div>
+                <span>Unvisited</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box current"></div>
+                <span>Current Node</span>
+            </div>
+            <div class="legend-item">
+                <div class="color-box visited"></div>
+                <span>Visited</span>
+            </div>
+        </div>
+    </div>
+    <script src="graph.js"></script>
+</body>
+</html> 

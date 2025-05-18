@@ -6,6 +6,8 @@
 
 body{
     background-color: #2F3A61;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 .flex{
     display: flex;
@@ -14,19 +16,29 @@ body{
 }
 .heading{
     text-align: center;
-    height: 50px;
-    width: 100%;
-    padding: 3px;
+    padding: 20px;
     color: white;
     font-family: monospace;
 }
 
+.heading h1 {
+    font-size: clamp(1.5em, 5vw, 2.5em);
+}
+
+.selbox {
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 10px;
+}
+
 select{
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    font-size: small;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: clamp(200px, 50vw, 300px);
+    height: 40px;
+    border-radius: 20px;
+    font-size: clamp(14px, 3vw, 16px);
+    font-family: monospace;
+    padding: 0 15px;
 }
 select:focus{
     outline: none;
@@ -35,19 +47,26 @@ select:focus{
     flex-direction: column;
     width: 100%;
     margin-top: 30px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.level {
+    min-width: max-content;
+    padding: 10px 0;
 }
 
 .node{
-    height: 40px;
-    width: 40px;
+    height: clamp(30px, 8vw, 40px);
+    width: clamp(30px, 8vw, 40px);
     background:linear-gradient(
         to right,
         #90F7EC,
         #0396FF
     );
     border-radius: 50%;
-     margin-left: 10px;
-     margin-top: 7px;
+     margin: 7px;
+     font-size: clamp(14px, 3vw, 16px);
 }
 #l1{
     border-top: 1px solid rgb(9, 237, 245);
@@ -110,7 +129,7 @@ select:focus{
     transform-origin: 0px 0px;
 }
 .t{
-  margin: 24px;
+  margin: clamp(12px, 3vw, 24px);
 }
 .but{
     display: flex;
@@ -122,23 +141,20 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 6px;
-    height: 25px;
-    width: 110px;
+    margin: 6px;
+    height: 40px;
+    width: clamp(110px, calc(100vw/3 - 40px), 150px);
     background-color: transparent;
     color: white;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #5677EC;
+    border-radius: 20px;
+    border: 2px solid #5677EC;
+    font-size: clamp(14px, 3vw, 16px);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 button:hover{
-   background-color: pink;
-   border-style: hidden;
+   background-color: white;
    color: black;
-   cursor: pointer;
-   
 }
 button:focus{
     outline: none;
@@ -147,7 +163,49 @@ button:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    height:100px;
+    min-height: 100px;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .tree {
+        margin-top: 20px;
+    }
     
+    .level {
+        padding: 5px 0;
+    }
+    
+    .node {
+        margin: 5px;
+    }
+    
+    button {
+        margin: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .selbox {
+        flex-direction: column;
+    }
+    
+    select {
+        width: 90%;
+    }
+    
+    button {
+        width: 90%;
+    }
+    
+    .tree {
+        padding: 10px;
+    }
+    
+    .output {
+        padding: 10px;
+    }
 }

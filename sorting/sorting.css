@@ -1,18 +1,29 @@
 *{
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 body{
     background-color: #2F3A61;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 .heading{
     text-align: center;
-    height: 52px;
-    width: 100%;
-    padding: 3px;
+    padding: 10px;
     color: white;
     font-family: monospace;
+}
+.heading h1 {
+    font-size: clamp(1.5em, 5vw, 2.5em);
+}
+.head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 button{
     border-style: solid;
@@ -22,8 +33,10 @@ button{
     background-color: transparent;
     color: white;
     height: 40px;
-    width: 125px;
-    font-size: 15px;
+    width: clamp(125px, calc(100vw/3 - 40px), 180px);
+    font-size: clamp(14px, 3vw, 15px);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 button:hover{
     cursor: pointer;
@@ -42,24 +55,74 @@ button:active{
 
 .heights{
     background-color:white;
-    width: 9px;
-    margin: 2px;
+    width: clamp(4px, 1.5vw, 9px);
+    margin: 1px;
 }
 
 .bars{
-    margin-top: 130px;
+    margin-top: clamp(50px, 10vh, 130px);
     
     display: flex;
-    height: 310px;
+    height: clamp(200px, 50vh, 310px);
     align-items: flex-end;
     justify-content: center;
+    padding: 0 10px;
 }
 
 #size{
     color: white;
     margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(14px, 3vw, 16px);
 }
 #Speed{
     color: white;
     margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+input[type="range"] {
+    width: clamp(150px, 30vw, 200px);
+}
+
+@media (max-width: 768px) {
+    .head {
+        padding: 10px;
+    }
+    
+    button {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .head {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    button {
+        width: 100%;
+        margin: 2px 0;
+    }
+    
+    #size, #Speed {
+        width: 100%;
+    }
+    
+    input[type="range"] {
+        width: 100%;
+    }
+    
+    .heights {
+        width: 4px;
+        margin: 1px;
+    }
 }
